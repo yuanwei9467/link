@@ -5,7 +5,8 @@ class IndexController extends Controller {
 
 	public function index()
 	{
-		return 'abc';
+		//return View::make('Admin::Public.login');
+		return View::make('Admin::Index.index');
 	}
 
 }

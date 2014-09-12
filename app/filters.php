@@ -35,6 +35,11 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
+	if (Auth::check())
+		{
+			return Redirect::to('admincp/index');	
+		}
+
 	if (Auth::guest())
 	{
 		if (Request::ajax())
@@ -43,7 +48,11 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('admin/login');
+
+			
+				return Redirect::guest('admincp/login');
+			
+			
 		}
 	}
 });

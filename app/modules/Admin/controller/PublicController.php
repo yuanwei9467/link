@@ -25,8 +25,15 @@ class PublicController extends Controller{
 		if($validator->fails()){
 			$messages = $validator->messages();
 		}
-		
+		if (Auth::attempt(array('name' => $input['username'], 'password' => $input['password'])))
+		{
+
+		    return Redirect::intended('admincp/index');
+		}else{
+			//return Response::json(array('msg' => 'fail'));
+		}
 		
 	}
+	
 }
 ?>
