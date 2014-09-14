@@ -25,5 +25,7 @@ Route::get('/', function()
 
 Route::get('users', 'UserController@getIndex');
  */
+Route::get('member/login','MemberController@login');
+Route::get('member/register','MemberController@register');
 
 

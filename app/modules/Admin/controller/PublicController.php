@@ -2,6 +2,7 @@
 	
 class PublicController extends Controller{
 	public function login(){
+
 		return View::make('Admin::Public.login');
 	}
 /**
