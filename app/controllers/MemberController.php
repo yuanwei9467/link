@@ -11,8 +11,35 @@ class MemberController extends BaseController{
         return View::make('Member.login',array('title'=>$title));
     }
     public function register(){
-        $title = '用户注册';
-        return View::make('Member.register',array('title'=>$title));
+    	if(Request::isMethod('post')){
+    		 $input = Input::all();
+    		 
+    		 $validator = Validator::make(
+    		 	array(
+    		 		'username'	=>	$input['username'],
+    		 		'password'	=>	$input['password'],
+    		 		 'email'	=>	$input['email']
+    		 		),
+    		 	array(
+    		 		'username'	=> 'required|unique:members',
+    		 		 'password' => 'required',
+    		 		 'email'	=>  'required|email|unique:members'
+    		 		)
+    		 );
+    		 if($validator->fails()){
+    		 	$messages = $validator->messages();
+    		 	return View::make('error',array('error'=>$messages));
+    		 }
+    		 
+    		 
+    	}else{
+    		$title = '用户注册';
+        	return View::make('Member.register',array('title'=>$title));
+    	}
+        
+    }
+    public function showerror(){
+    	return View::make('error');
     }
 
 }

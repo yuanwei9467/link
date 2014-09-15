@@ -25,7 +25,9 @@ Route::get('/', function()
 
 Route::get('users', 'UserController@getIndex');
  */
+Route::get('/', 'Index1Controller@index');
 Route::get('member/login','MemberController@login');
-Route::get('member/register','MemberController@register');
+Route::any('member/register','MemberController@register');
+Route::get('member/error','MemberController@showerror');
 
 

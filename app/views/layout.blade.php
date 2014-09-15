@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-
-<html lang="en"><!--<![endif]--><head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>用户</title>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Unify | Welcome...</title>
+ 
+    
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -25,8 +28,11 @@
 
     <!-- CSS Theme -->
     <link rel="stylesheet" href="/app/css/default.css" id="style_color">
+    <link rel="stylesheet" href="/app/css/custom.css" id="style_color">
 
-
+    <style>
+    .container{width:1170px;}
+    </style>
 </head>
 
 <body>
@@ -67,7 +73,7 @@
 <div class="container">
 <!-- Brand and toggle get grouped for better mobile display -->
 <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="display:none;">
         <span class="sr-only">Toggle navigation</span>
         <span class="fa fa-bars"></span>
     </button>
@@ -75,10 +81,12 @@
         <img id="logo-header" src="/app/images/logo1-default.png" alt="Logo">
     </a>
 </div>
-
+<style>
+.nav li{float:left;}
+</style>
 <!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse navbar-responsive-collapse">
-<ul class="nav navbar-nav">
+<div class="collapse navbar-collapse navbar-responsive-collapse" style="display:block">
+<ul class="nav navbar-nav" style="display:block;float:right;">
 <!-- Home -->
 <li class="dropdown">
     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
@@ -551,12 +559,16 @@
     @yield('content')
 </div><!--/container-->
 <!--=== End Content Part ===-->
-
+<style>
+.col-md-4{
+    width:33.3333%;
+}
+</style>
 <!--=== Footer ===-->
 <div class="footer">
-    <div class="container">
+    <div class="container" style="width:1170px;">
         <div class="row">
-            <div class="col-md-4 md-margin-bottom-40">
+            <div class="col-md-4 md-margin-bottom-40" style="float:left;">
                 <!-- About -->
                 <div class="headline"><h2>About</h2></div>
                 <p class="margin-bottom-25 md-margin-bottom-40">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>
@@ -576,7 +588,7 @@
                 <!-- End Monthly Newsletter -->
             </div><!--/col-md-4-->
 
-            <div class="col-md-4 md-margin-bottom-40">
+            <div class="col-md-4 md-margin-bottom-40" style="float:left;">
                 <!-- Recent Blogs -->
                 <div class="posts">
                     <div class="headline"><h2>Recent Blog Entries</h2></div>
@@ -602,7 +614,7 @@
                 <!-- End Recent Blogs -->
             </div><!--/col-md-4-->
 
-            <div class="col-md-4">
+            <div class="col-md-4"  style="float:left;">
                 <!-- Contact Us -->
                 <div class="headline"><h2>Contact Us</h2></div>
                 <address class="md-margin-bottom-40">
@@ -654,8 +666,8 @@
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->
-<script src="app/js/ga.js" async="" type="text/javascript"></script>
-<script type="text/javascript" src="/app/js/jquery-1.js"></script>
+<script src="/app/js/ga.js" async="" type="text/javascript"></script>
+
 <script type="text/javascript" src="/app/js/jquery-migrate-1.js"></script>
 <script type="text/javascript" src="/app/js/bootstrap.js"></script>
 <!-- JS Implementing Plugins -->
