@@ -77,5 +77,11 @@ App::down(function()
 | definitions instead of putting them all in the main routes file.
 |
 */
+/*
+App::operate(function($exception)
+{
+    return Response::view('errors.missing', array($exception));
+});
+*/
 
 require app_path().'/filters.php';

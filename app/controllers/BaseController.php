@@ -16,4 +16,11 @@ class BaseController extends Controller {
 		}
 	}
 
+	/**
+	*验证用户是否登陆
+	*/
+	protected function verify(){
+		
+	}
+
 }
