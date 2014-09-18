@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2014-09-10 17:18:41
+Date: 2014-09-18 17:37:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3199,12 +3199,15 @@ CREATE TABLE `members` (
   `regtime` int(11) NOT NULL,
   `last_login` int(11) NOT NULL,
   `last_login_ip` int(11) NOT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of members
 -- ----------------------------
+INSERT INTO `members` VALUES ('4', 'yuanwei', '$2y$10$m7D1/Y0iuNVJ7JOR7JgIXunSN', 'yuanwei9467@126.com', '0', '0', '0', null, null, null, null, null, '1411007227', '1411007227', '2130706433', '2014-09-18 02:27:07', '2014-09-18 02:27:07');
 
 -- ----------------------------
 -- Table structure for `members_bankaccount`
