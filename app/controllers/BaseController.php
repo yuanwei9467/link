@@ -20,7 +20,14 @@ class BaseController extends Controller {
 	*验证用户是否登陆
 	*/
 	protected function verify(){
-		
+
+		if(Session::get('userid')){
+			 return true;
+		}else{
+			return false;
+			
+			
+		}
 	}
 
 }

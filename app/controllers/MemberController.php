@@ -10,14 +10,33 @@ class MemberController extends BaseController{
     *登陆
     */
     public function login(){
-        $title = '用户登录';
-        return View::make('Member.login',array('title'=>$title));
+        if(Request::isMethod('post')){
+             $input = Input::all();
+             $validator = Validator::make(
+                array(
+                        'username' => $input['username'],
+                        'password' => $input['password']
+                    ),
+                array(
+                        'username' => 'required',
+                        'password' => 'required'
+                    )
+            );
+             if($validator->fails()){
+                
+             }
+
+        }else{
+            $title = '用户登录';
+            return View::make('Member.login',array('title'=>$title));
+        }
+        
     }
     /**
     *注册
     */
     public function register(){
-        Log::info('This is some useful information.');
+        
     	if(Request::isMethod('post')){
     		 $input = Input::all();
     		 
@@ -40,7 +59,9 @@ class MemberController extends BaseController{
 
              $member = new Member();
              if($member->insert($input)){
-                return 'aaa';
+                    $insertedId = $member->id;
+                    Session::put('userid', $insertedId);
+                    return Redirect::to('member/index');
              }else{
                 return Response::View('errors',array('msg'=>'注册错误'));
              }	 
@@ -58,7 +79,10 @@ class MemberController extends BaseController{
     *个人首页
     */
     public function index(){
-        
+        if(!$this->verify()){
+            return View::make('errors',array('msg'=>'请先登录','url'=>'member/login'));
+        }
+        return View::make('Member.index');
     }
 
 }

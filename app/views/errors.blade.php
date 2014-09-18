@@ -44,7 +44,7 @@
                     <span class="sorry">{{$msg}}</span>
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
-                            <a class="btn-u btn-brd btn-u-light" href="<?php echo url('/')?>">返回主页</a>
+                            <a class="btn-u btn-brd btn-u-light" href="<?php echo url($url)?>">3秒后将跳转</a>
                         </div> 
                     </div> 
                 </div>
@@ -62,39 +62,30 @@
     <!--=== End Sticky Footer ===-->
 
 <!-- JS Global Compulsory -->           
-<script type="text/javascript" async="" src="./Unify   Welcome..._files/ga.js"></script><script type="text/javascript" src="./Unify   Welcome..._files/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="./Unify   Welcome..._files/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="./Unify   Welcome..._files/bootstrap.min.js"></script> 
+<script type="text/javascript" async="" src="/app/js/ga.js"></script><script type="text/javascript" src="./Unify   Welcome..._files/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/app/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/app/js/bootstrap.min.js"></script> 
 <!-- JS Implementing Plugins -->           
-<script type="text/javascript" src="./Unify   Welcome..._files/back-to-top.js"></script>
-<script type="text/javascript" src="./Unify   Welcome..._files/jquery.backstretch.min.js"></script>
-<script type="text/javascript">
-    $.backstretch([
-      "assets/img/blur/img2.jpg"
-      ])
-</script><div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 903px; width: 1680px; z-index: -999999; position: fixed;"><img src="/app/images/img2.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1680px; height: 1095.65217391304px; max-width: none; z-index: -999999; left: 0px; top: -96.3260869565218px;"></div>
+
+<script type="text/javascript" src="/app/js/jquery.backstretch.min.js"></script>
+<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 903px; width: 1680px; z-index: -999999; position: fixed;"><img src="/app/images/img2.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1680px; height: 1095.65217391304px; max-width: none; z-index: -999999; left: 0px; top: -96.3260869565218px;"></div>
 <!-- JS Page Level -->           
 <script type="text/javascript" src="./Unify   Welcome..._files/app.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        App.init();
-    });
-</script>
+
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
     <script src="assets/plugins/html5shiv.js"></script>
 <![endif]-->
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29166220-1']);
-  _gaq.push(['_setDomainName', 'htmlstream.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  setTimeout('relink()',3000);//1秒后执行
+  function relink(){
+    
+    @if ($url)
+        location.href = '<?php echo url($url)?>';
+    @else
+        location.href = history.go(-1);
+    @endif
+  }
 </script>
 
  <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 5px; right: 5px; opacity: 0; cursor: pointer;"><img src="./Unify   Welcome..._files/up.png" style="width:51px; height:42px"></div></body></html>
