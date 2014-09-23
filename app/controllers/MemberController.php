@@ -61,6 +61,7 @@ class MemberController extends BaseController{
              if($member->insert($input)){
                     $insertedId = $member->id;
                     Session::put('userid', $insertedId);
+                    Session::put('username', $member->username);
                     return Redirect::to('member/index');
              }else{
                 return Response::View('errors',array('msg'=>'注册错误'));
@@ -79,10 +80,22 @@ class MemberController extends BaseController{
     *个人首页
     */
     public function index(){
+        $title = '个人中心';
         if(!$this->verify()){
             return View::make('errors',array('msg'=>'请先登录','url'=>'member/login'));
         }
-        return View::make('Member.index');
+        return View::make('Member.index',array('title'=>$title));
+    }
+
+    /**
+    *个人信息页面
+    */
+    public function profile(){
+        $userid = Session::get('userid');
+        $member = Member::find($userid);
+        print_r($member);
+        exit;
+        return View::make('Member.profile',array('member'=>$member,'title'=>'个人信息'));
     }
 
 }

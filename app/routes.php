@@ -30,5 +30,6 @@ Route::get('member/login','MemberController@login');
 Route::any('member/register','MemberController@register');
 Route::get('member/error','MemberController@showerror');
 Route::get('member/index','MemberController@index');
+Route::get('member/profile','MemberController@profile');
 
 

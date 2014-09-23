@@ -22,11 +22,10 @@ class BaseController extends Controller {
 	protected function verify(){
 
 		if(Session::get('userid')){
+			 
 			 return true;
 		}else{
-			return false;
-			
-			
+			return false;		
 		}
 	}
 

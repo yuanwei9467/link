@@ -46,6 +46,8 @@
     <div class="container">
         <!-- Topbar Navigation -->
         <ul class="loginbar pull-right">
+            <li> @if (Session::get('userid')){{Session::get('username')}} @else <a href="">请登录</a> @endif </li>
+            <!--
             <li>
                 <i class="fa fa-globe"></i>
                 <a>Languages</a>
@@ -62,6 +64,7 @@
             <li><a href="http://htmlstream.com/preview/unify-v1.5/page_faq.html">Help</a></li>
             <li class="topbar-devider"></li>
             <li><a href="http://htmlstream.com/preview/unify-v1.5/page_login.html">Login</a></li>
+        -->
         </ul>
         <!-- End Topbar Navigation -->
     </div>
