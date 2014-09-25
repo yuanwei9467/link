@@ -547,7 +547,13 @@
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
     <div class="container">
-        <h1 class="pull-left">{{$title}}</h1>
+        <h1 class="pull-left">
+         @if(isset($title))
+         {{$title}}
+          @else
+          17T8
+        @endif
+        </h1>
         <ul class="pull-right breadcrumb">
             <li><a href="http://htmlstream.com/preview/unify-v1.5/index.html">Home</a></li>
             <li><a href="">Pages</a></li>

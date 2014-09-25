@@ -19,13 +19,38 @@
                             <div class="form-group">
                                 <label for="inputEmail1" class="col-lg-2 control-label">用户名</label>
                                 <div class="col-lg-10">
-                                    {{$member.username}}
+                                    <?php echo $member['username']?>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
+                                <label for="inputPassword1" class="col-lg-2 control-label">手机号码</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                                    <input type="text" class="form-control"  placeholder="手机号码" name="mobile" value="<?php echo $member['mobile']?>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword1" class="col-lg-2 control-label">电子邮箱</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control"  placeholder="电子邮箱" name="email" value="<?php echo $member['email']?>">
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label for="inputPassword1" class="col-lg-2 control-label">固定电话</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control"  placeholder="固定电话" name="telephone" value="<?php echo $member['telephone']?>">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPassword1" class="col-lg-2 control-label">QQ</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control"  placeholder="QQ" name="telephone" value="<?php echo $member['qq']?>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword1" class="col-lg-2 control-label">地址</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control"  placeholder="地址" name="address" value="<?php echo $member['address']?>">
                                 </div>
                             </div>
                             <div class="form-group">

@@ -9,7 +9,7 @@
                             <li><a href="{{url('member/profile')}}"><i class="fa fa-sort-alpha-asc"></i> 账户信息</a></li>
                             <li>
                                 <!--<span class="badge badge-u">New</span>-->
-                                <a href="http://htmlstream.com/preview/unify-v1.5/feature_typo_headings.html"><i class="fa fa-magic"></i> 网站列表</a>
+                                <a href="{{url('website/index')}}"><i class="fa fa-magic"></i> 网站列表</a>
                             </li>
                             <li>
                                 <span class="badge badge-u">New</span>                            

@@ -12,6 +12,7 @@ class MemberController extends BaseController{
     public function login(){
         if(Request::isMethod('post')){
              $input = Input::all();
+
              $validator = Validator::make(
                 array(
                         'username' => $input['username'],
@@ -24,6 +25,13 @@ class MemberController extends BaseController{
             );
              if($validator->fails()){
                 
+             }
+             $row = DB::table('members')->where('username','=',$input['username'])->first();
+             
+             if($row){
+                 Session::put('userid', $row->id);
+                 Session::put('username', $row->username);
+                return Redirect::to('member/index');
              }
 
         }else{
@@ -93,9 +101,8 @@ class MemberController extends BaseController{
     public function profile(){
         $userid = Session::get('userid');
         $member = Member::find($userid);
-        print_r($member);
-        exit;
-        return View::make('Member.profile',array('member'=>$member,'title'=>'个人信息'));
+        
+        return View::make('Member.profile',array('member'=>$member->getAttributes(),'title'=>'个人信息'));
     }
 
 }

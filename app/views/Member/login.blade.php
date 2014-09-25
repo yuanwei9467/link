@@ -7,18 +7,18 @@
 <link rel="stylesheet" href="/app/css/app.css">
 <div class="row">
     <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-        <form class="reg-page">
+        <form class="reg-page" method="post" action="<?php echo url('member/login');?>">
             <div class="reg-header">
                 <h2>账号登陆</h2>
             </div>
 
             <div class="input-group margin-bottom-20">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input placeholder="用户名" class="form-control" type="text">
+                <input placeholder="用户名" class="form-control" type="text" name="username">
             </div>
             <div class="input-group margin-bottom-20">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input placeholder="密码" class="form-control" type="password">
+                <input placeholder="密码" class="form-control" type="password" name="password">
             </div>
 
             <div class="row">

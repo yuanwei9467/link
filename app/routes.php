@@ -26,10 +26,12 @@ Route::get('/', function()
 Route::get('users', 'UserController@getIndex');
  */
 Route::get('/', 'Index1Controller@index');
-Route::get('member/login','MemberController@login');
+Route::any('member/login','MemberController@login');
 Route::any('member/register','MemberController@register');
 Route::get('member/error','MemberController@showerror');
 Route::get('member/index','MemberController@index');
 Route::get('member/profile','MemberController@profile');
+Route::get('website/index','WebsiteController@index');
+Route::any('website/add','WebsiteController@add');
 
 
