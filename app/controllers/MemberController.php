@@ -19,12 +19,13 @@ class MemberController extends BaseController{
                         'password' => $input['password']
                     ),
                 array(
-                        'username' => 'required',
-                        'password' => 'required'
+                        '用户名' => 'required',
+                        '密码' => 'required'
                     )
             );
              if($validator->fails()){
-                
+                $message = $validator->messages()->toArray();
+                return View::make('error',array('message'=>$message));
              }
              $row = DB::table('members')->where('username','=',$input['username'])->first();
              

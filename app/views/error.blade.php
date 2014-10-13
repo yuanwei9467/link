@@ -40,8 +40,11 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="error-v4">
                     <a href="http://htmlstream.com/preview/unify-v1.5/page_404_error3.html#"><img src="/app/images/logo2-default.png" alt=""></a>
-                    <?php print_r($error);?>
-                    <span class="sorry">aaaaaaa</span>
+                    <?php foreach($message as $k=>$v){?>
+                    <?php foreach($v as $k1=>$v1){?>
+                    <span class="sorry"><?php echo $v1;?></span>
+                    <?php }?>
+                    <?php }?>
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
                             <a class="btn-u btn-brd btn-u-light" href="<?php echo url('/')?>">返回主页</a>

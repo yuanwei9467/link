@@ -47,6 +47,9 @@
         <!-- Topbar Navigation -->
         <ul class="loginbar pull-right">
             <li> @if (Session::get('userid')){{Session::get('username')}} @else <a href="">请登录</a> @endif </li>
+            <li><a href="">下载链接</a></li>
+            <li><a href="">收藏本站</a></li>
+            <li><a href="">帮助中心</a></li>
             <!--
             <li>
                 <i class="fa fa-globe"></i>
@@ -72,9 +75,10 @@
 <!-- End Topbar -->
 
 <!-- Navbar -->
+<!--
 <div class="navbar navbar-default" role="navigation">
 <div class="container">
-<!-- Brand and toggle get grouped for better mobile display -->
+
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="display:none;">
         <span class="sr-only">Toggle navigation</span>
@@ -87,10 +91,10 @@
 <style>
 .nav li{float:left;}
 </style>
-<!-- Collect the nav links, forms, and other content for toggling -->
+
 <div class="collapse navbar-collapse navbar-responsive-collapse" style="display:block">
 <ul class="nav navbar-nav" style="display:block;float:right;">
-<!-- Home -->
+
 <li class="dropdown">
     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
         Home
@@ -112,15 +116,15 @@
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_home10.html">Option 14: Home Fixed Menu</a></li>
     </ul>
 </li>
-<!-- End Home -->
 
-<!-- Pages -->
+
+
 <li class="dropdown active">
     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
         Pages
     </a>
     <ul class="dropdown-menu">
-        <!-- About Pages -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">About Pages</a>
             <ul class="dropdown-menu">
@@ -130,9 +134,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_about_our_team.html">About Our Team</a></li>
             </ul>
         </li>
-        <!-- End About Pages -->
+        
 
-        <!-- Profile Pages -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Profile Dashboard Pages</a>
             <ul class="dropdown-menu">
@@ -145,9 +149,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/profile_settings.html">Profile Settings</a></li>
             </ul>
         </li>
-        <!-- End Profile Pages -->
+        
 
-        <!-- Job Pages -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Job Pages</a>
             <ul class="dropdown-menu">
@@ -157,9 +161,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_jobs_inner2.html">Jobs Description Min</a></li>
             </ul>
         </li>
-        <!-- End Job Pages -->
+        
 
-        <!-- Email Tempaltes -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Email Templates</a>
             <ul class="dropdown-menu">
@@ -218,13 +222,13 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_services1.html">Our Services Basic</a></li>
             </ul>
         </li>
-        <!-- End Email Tempaltes -->
+        
 
-        <!-- Funny Boxes -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_funny_boxes.html">Funny Boxes</a></li>
-        <!-- End Funny Boxes -->
+        
 
-        <!-- Pricing Tables -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Pricing Tables</a>
             <ul class="dropdown-menu">
@@ -234,13 +238,13 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_pricing.html">Default Pricing Tables</a></li>
             </ul>
         </li>
-        <!-- End Pricing Tables -->
+        
 
-        <!-- Invoice Page -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_invoice.html">Invoice Page</a></li>
-        <!-- End Invoice Page -->
+        
 
-        <!-- Search Results -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Search Results</a>
             <ul class="dropdown-menu">
@@ -248,13 +252,13 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_search_table.html">Search Result Tables</a></li>
             </ul>
         </li>
-        <!-- End Search Results -->
+        
 
-        <!-- Coming Soon -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_coming_soon.html">Coming Soon</a></li>
-        <!-- End Coming Soon -->
+        
 
-        <!-- FAQs Pages -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">FAQs Pages</a>
             <ul class="dropdown-menu">
@@ -262,13 +266,13 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_faq.html">FAQs Basic</a></li>
             </ul>
         </li>
-        <!-- End FAQs Pages -->
+        
 
-        <!-- Gallery Page -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_gallery.html">Gallery Page</a></li>
-        <!-- End Gallery Page -->
+        
 
-        <!-- Login and Registration -->
+        
         <li class="dropdown-submenu active">
             <a href="javascript:void(0);">Login and Registration</a>
             <ul class="dropdown-menu">
@@ -278,9 +282,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_login1.html">Login Option</a></li>
             </ul>
         </li>
-        <!-- End Login and Registration -->
+        
 
-        <!-- Error Pages -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Error Pages</a>
             <ul class="dropdown-menu">
@@ -290,13 +294,13 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_404_error3.html">404 Error Option 3</a></li>
             </ul>
         </li>
-        <!-- End Error Pages -->
+        
 
-        <!-- Clients Page -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_clients.html">Clients Page</a></li>
-        <!-- End Clients Page -->
+        
 
-        <!-- Column Pages -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Column Pages</a>
             <ul class="dropdown-menu">
@@ -305,26 +309,26 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/page_3_columns.html">3 Columns Page</a></li>
             </ul>
         </li>
-        <!-- End Column Pages -->
+        
 
-        <!-- Privacy Policy -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_privacy.html">Privacy Policy</a></li>
-        <!-- End Privacy Policy -->
+        
 
-        <!-- Terms Of Service -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_terms.html">Terms Of Service</a></li>
-        <!-- End Terms Of Service -->
+        
     </ul>
 </li>
-<!-- End Pages -->
 
-<!-- Features -->
+
+
 <li class="dropdown">
     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
         Features
     </a>
     <ul class="dropdown-menu">
-        <!-- Typography -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Typography</a>
             <ul class="dropdown-menu">
@@ -338,9 +342,7 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_typo_grid.html"><i class="fa fa-align-justify"></i> Grid Layouts</a></li>
             </ul>
         </li>
-        <!-- End Typography -->
-
-        <!-- Buttons -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Buttons UI</a>
             <ul class="dropdown-menu">
@@ -349,9 +351,7 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_btn_effects.html"><i class="fa fa-bolt"></i> Loading &amp; Hover Effects</a></li>
             </ul>
         </li>
-        <!-- End Buttons -->
-
-        <!-- Icons -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Icons</a>
             <ul class="dropdown-menu">
@@ -361,9 +361,7 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_icon_glyph.html"><i class="fa fa-chevron-circle-right"></i> Glyphicons Icons</a></li>
             </ul>
         </li>
-        <!-- End Icons -->
-
-        <!-- Content Boxes -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Content Boxes</a>
             <ul class="dropdown-menu">
@@ -372,13 +370,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_box_funny.html"><i class="fa fa-bars"></i> Funny Boxes</a></li>
             </ul>
         </li>
-        <!-- End Content Boxes -->
-
-        <!-- Thumbnails -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_thumbails.html">Thumbnails</a></li>
-        <!-- End Thumbnails -->
-
-        <!-- Components -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Components</a>
             <ul class="dropdown-menu">
@@ -390,13 +384,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_compo_pagination.html"><i class="fa fa-arrows-h"></i> Paginations</a></li>
             </ul>
         </li>
-        <!-- End Components -->
-
-        <!-- Accordion and Tabs -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_accordion_and_tabs.html">Accordion &amp; Tabs</a></li>
-        <!-- End Accordion and Tabs -->
-
-        <!-- Timeline -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Timeline</a>
             <ul class="dropdown-menu">
@@ -404,13 +394,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_timeline2.html"><i class="fa fa-dot-circle-o"></i> Timeline Option 2</a></li>
             </ul>
         </li>
-        <!-- End Timeline -->
-
-        <!-- Carousel -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_carousels.html">Carousel Examples</a></li>
-        <!-- End Carousel -->
-
-        <!-- Forms -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Forms</a>
             <ul class="dropdown-menu">
@@ -424,13 +410,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_form_modals.html"><i class="fa fa-bars"></i> Modals</a></li>
             </ul>
         </li>
-        <!-- End Forms -->
-
-        <!-- Tables -->
+        
         <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_table_general.html">Tables</a></li>
-        <!-- End Tables -->
-
-        <!-- Maps -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Maps</a>
             <ul class="dropdown-menu">
@@ -438,13 +420,9 @@
                 <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_maps_vector.html"><i class="fa fa-align-center"></i> Vector Maps</a></li>
             </ul>
         </li>
-        <!-- End Maps -->
-
-        <!-- Charts and Countdowns -->
+       
         <li><a href="http://htmlstream.com/preview/unify-v1.5/feature_compo_charts.html">Charts &amp; Countdowns</a></li>
-        <!-- End Charts and Countdowns -->
-
-        <!-- Sub Level Menu -->
+        
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Sub Level 1</a>
             <ul class="dropdown-menu">
@@ -469,12 +447,10 @@
                 </li>
             </ul>
         </li>
-        <!-- End Sub Level Menu -->
+        
     </ul>
 </li>
-<!-- End Features -->
 
-<!-- Portfolio -->
 <li class="dropdown">
     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
         Portfolio
@@ -488,9 +464,7 @@
         <li><a href="http://htmlstream.com/preview/unify-v1.5/portfolio_item1.html">Portfolio Item Option 2</a></li>
     </ul>
 </li>
-<!-- Ens Portfolio -->
 
-<!-- Blog -->
 <li class="dropdown">
     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
         Blog
@@ -508,9 +482,7 @@
         <li><a href="http://htmlstream.com/preview/unify-v1.5/blog_item_option2.html">Blog Item Option 2</a></li>
     </ul>
 </li>
-<!-- End Blog -->
 
-<!-- Contacts -->
 <li class="dropdown">
     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
         Contacts
@@ -521,9 +493,7 @@
         <li><a href="http://htmlstream.com/preview/unify-v1.5/page_contact3.html">Contacts Option 2</a></li>
     </ul>
 </li>
-<!-- End Contacts -->
 
-<!-- Search Block -->
 <li>
     <i class="search fa fa-search search-btn"></i>
     <div class="search-open">
@@ -535,11 +505,12 @@
         </div>
     </div>
 </li>
-<!-- End Search Block -->
+
 </ul>
-</div><!--/navbar-collapse-->
 </div>
 </div>
+</div>
+-->
 <!-- End Navbar -->
 </div>
 <!--=== End Header ===-->
@@ -547,17 +518,20 @@
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
     <div class="container">
-        <h1 class="pull-left">
-         @if(isset($title))
-         {{$title}}
-          @else
-          17T8
-        @endif
-        </h1>
-        <ul class="pull-right breadcrumb">
+       
+        <ul class="pull-left breadcrumb">
+             <h1 class="pull-left">
+             @if(isset($title))
+             {{$title}}
+              @else
+              17T8
+            @endif
+            </h1>
+            <!--
             <li><a href="http://htmlstream.com/preview/unify-v1.5/index.html">Home</a></li>
             <li><a href="">Pages</a></li>
             <li class="active">Login</li>
+        -->
         </ul>
     </div><!--/container-->
 </div><!--/breadcrumbs-->
