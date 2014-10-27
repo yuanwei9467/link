@@ -18,6 +18,8 @@ require __DIR__.'/../vendor/autoload.php';
 
 require __DIR__.'/../app/common/functions.php';
 
+require __DIR__.'/../app/lib/Status.php';
+
 /*
 |--------------------------------------------------------------------------
 | Include The Compiled Class File

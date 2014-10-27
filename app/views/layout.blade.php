@@ -75,6 +75,15 @@
 <!-- End Topbar -->
 
 <!-- Navbar -->
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://htmlstream.com/preview/unify-v1.5/index.html">
+                <img id="logo-header" src="/app/images/17t8.PNG" alt="Logo">
+            </a>
+        </div>
+    </div>
+</div>
 <!--
 <div class="navbar navbar-default" role="navigation">
 <div class="container">

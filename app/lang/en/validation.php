@@ -86,6 +86,12 @@ return array(
 		'attribute-name' => array(
 			'rule-name' => 'custom-message',
 		),
+		'username' => array(
+			'required' => '用户名不能为空',
+		),
+		'password' => array(
+			'required' => '密码不能为空',
+			)
 	),
 
 	/*

@@ -2,6 +2,8 @@
  class Website extends Eloquent{
 
  	protected $errorMsg;
+ 	protected $websiteCategoryList = null;
+ 	protected $websi
  	/**
  	*保存website
  	*@return bool
@@ -44,6 +46,15 @@
  		return $this->errorMsg;
  	}
 
+ 	/**
+ 	*
+ 	*/
+ 	public function getWebsiteCategory(){
+ 		if($this->websiteCategoryList === null){
+ 			$this->websiteCategoryList = WebsiteCategory::all();
+ 		}
+ 		return $this->websiteCategoryList;
+ 	}
 
  }
 ?>

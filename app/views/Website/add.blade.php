@@ -11,7 +11,7 @@
                         <h3 class="panel-title"><i class="fa fa-tasks"></i>账号维护</h3>
                     </div>
                     <div class="panel-body">                                                      
-                        <form class="form-horizontal sky-form" role="form">
+                        <form class="form-horizontal sky-form" role="form" action="<?php echo url('website/add')?>" method="post">
                             <h4>基本信息</h4>
                             <div class="form-group">
                                 <label for="inputEmail1" class="col-lg-2 control-label">网站地址</label>
@@ -29,12 +29,12 @@
                                 <label for="inputPassword1" class="col-lg-2 control-label">分类</label>
                                 <div class="col-lg-10">
                                     <label class="select">
-                                <select>
-                                    <option value="0">Choose name</option>
-                                    <option value="1">Alexandra</option>
-                                    <option value="2">Alice</option>
-                                    <option value="3">Anastasia</option>
-                                    <option value="4">Avelina</option>
+                                <select name="category_id">
+                                    
+                                    <option value="0">请选择</option>
+                                    <?php foreach($websiteCategoryList as $key => $value){?>
+                                        <option value="<?php echo $value->id;?>"><?php echo $value->name;?></option>
+                                    <?php }?>
                                 </select>
                                 <i></i>
                             </label>
@@ -45,7 +45,7 @@
                                 <label for="inputPassword1" class="col-lg-2 control-label">描述</label>
                                 <div class="col-lg-10">
                                     <label class="textarea">
-                                        <textarea rows="3"></textarea>
+                                        <textarea rows="3" name="describe"></textarea>
                                     </label>
                                 </div>
                             </div>

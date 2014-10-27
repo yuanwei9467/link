@@ -21,22 +21,27 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>First Name</th>
-                                <th class="hidden-sm">Last Name</th>
-                                <th>Username</th>
-                                <th>Status</th>
+                                <th>ID</th>
+                                <th>网站名称</th>
+                                <th class="hidden-sm">网站地址</th>
+                                <th>分类</th>
+                                <th>添加时间</th>
+                                <th>状态</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach ($websiteList as $key => $website) {?>
+                                
+                            
                             <tr>
                                 <td>1</td>
                                 <td>Mark</td>
+                                <td></td>
                                 <td class="hidden-sm">Otto</td>
                                 <td>@mdo</td>
                                 <td><span class="label label-warning">Expiring</span></td>                          
                             </tr>
-                            
+                          <?php }?>  
                         </tbody>
                     </table>
                 </div>
