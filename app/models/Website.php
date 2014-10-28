@@ -3,25 +3,12 @@
 
  	protected $errorMsg;
  	protected $websiteCategoryList = null;
- 	protected $websi
- 	/**
- 	*保存website
- 	*@return bool
- 	*/
- 	public function insert(){
- 		if($this->id){
+ 	protected $status;
+ 	
+ 	
+ 	
 
- 		}else{
- 			if($this->validate){
- 				if($this->save()){
- 					return true;
- 				}else{
- 					return false;
- 				}
- 				
- 			}
- 		}
- 	}
+
 
  	/**
  	* 验证数据

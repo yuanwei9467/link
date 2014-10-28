@@ -5,6 +5,9 @@
 				'0'=>'暂停',
 				'1'=>'启用'
 			);
+		 public function getStatus($key){
+		 	return $this->status[$key];
+		 }
 	}
 
 ?>

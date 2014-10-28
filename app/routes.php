@@ -25,6 +25,8 @@ Route::get('/', function()
 
 Route::get('users', 'UserController@getIndex');
  */
+
+Route::pattern('id', '[0-9]+');
 Route::get('/', 'Index1Controller@index');
 Route::any('member/login','MemberController@login');
 Route::any('member/register','MemberController@register');
@@ -33,5 +35,7 @@ Route::get('member/index','MemberController@index');
 Route::get('member/profile','MemberController@profile');
 Route::get('website/index','WebsiteController@index');
 Route::any('website/add','WebsiteController@add');
+Route::any('website/edit/{id}','WebsiteController@edit');
+Route::get('website/del','WebsiteController@del');
 
 

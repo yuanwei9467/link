@@ -27,6 +27,7 @@
                                 <th>分类</th>
                                 <th>添加时间</th>
                                 <th>状态</th>
+                                <th>操作<th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,12 +35,13 @@
                                 
                             
                             <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td></td>
-                                <td class="hidden-sm">Otto</td>
-                                <td>@mdo</td>
-                                <td><span class="label label-warning">Expiring</span></td>                          
+                                <td><?php echo $website->id;?></td>
+                                <td><?php echo $website->name;?></td>
+                                <td><?php echo $website->url;?></td>
+                                <td class="hidden-sm"><?php echo websiteCategory::find($website->category_id)->name;?></td>
+                                <td><?php echo $website->created_at;?></td>
+                                <td><?php if($website->status==0){echo '暂停';}else{echo '启用';}?></td>
+                                <td><a href="<?php echo url("website/edit/$website->id")?>">修改</a><a href="<?php echo url('website/del')?>">删除</a></td>                          
                             </tr>
                           <?php }?>  
                         </tbody>

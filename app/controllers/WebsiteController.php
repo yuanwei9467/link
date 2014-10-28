@@ -1,9 +1,11 @@
 <?php 
 class WebsiteController extends BaseController{
 	public function index(){
-		$website = new Website();
-		$websiteList = $website::all();
-		return View::make('Website.index',array('websiteList',$websiteList));
+		
+		$websiteList = Website::all();
+
+		
+		return View::make('Website.index',array('websiteList'=>$websiteList));
 	}
 
 	public function add(){
@@ -27,6 +29,27 @@ class WebsiteController extends BaseController{
 			return View::make('Website.add',array('websiteCategoryList'=>$websiteCategoryList));
 		}
 		
+	}
+	public function edit($id){
+		
+			
+		if(Request::isMethod('post')){
+			$input = Input::all();
+			$website = Website::find($input['id']);
+			$website->url = $input['url'];
+			$website->name = $input['name'];
+			$website->describe = $input['describe'];
+			$website->category_id = $input['category_id'];
+			$website->status = $input['status'];
+			if($website->save()){
+				return Redirect::to('website/index')->with('message', '添加成功');
+			}	
+		}else{
+			
+			$website = Website::find($id);
+			
+			return View::make('website.edit',array('website'=>$website,'websiteCategoryList'=>$website->getWebsiteCategory()));
+		}
 	}
 }
 
